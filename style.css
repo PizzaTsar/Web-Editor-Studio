@@ -63,7 +63,7 @@ header p:hover{
 main{
     display: flex;
     width: 100%;
-    height: calc(100vh - 55px);
+    height: calc(100vh - 50px);
 }
 
 .editor{
@@ -81,14 +81,22 @@ main{
 }
 
 .code-subarea{
+    display: flex;
+    flex-direction: column;
     height: 100%;
     padding: 8px 20px;
+}
+
+.code-subarea :nth-child(3){
+    border-radius: 8px;
+    height: 100%;
 }
 
 .code-title{
     max-height: 48px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-weight: 700;
     gap: 8px;
     margin: 0px !important;
@@ -101,22 +109,52 @@ main{
     width: 32px;
 }
 
-.code-subarea{
+.logo-img-named{
     display: flex;
-    flex-direction: column;
+    gap: 8px;
 }
 
-.code-subarea :nth-child(3){
-    border-radius: 8px;
-    height: 100%;
+.copy-widget{
+    display: flex;
+    gap: 12px;
 }
 
-/* .code >  div{
-    border-bottom: 2px solid #3c3c3c;
-    height: 100%;
-    margin: 0px 20px;
+.copy-button{
+    background-color: #2c2c2c;
+    color: #9c9c9c;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 2em;
+    transition: 300ms;
+}
+
+.copy-button:hover{
+    background-color: #9c9c9c;
+    color: #151515;
+}
+
+.copy-success{
+    display: none;
+    background-color: #2c2c2c;
+    color: #9c9c9c;
+    padding: 8px 16px;
+    font-size: 0.5em;
     border-radius: 8px;
-}*/
+    position: relative;
+}
+
+.copy-success::after{
+    content: "";
+    width: 8px;
+    height: 16px;
+    background-color: #2c2c2c;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+
+}
 
 .preview{
     width: calc(100% - 500px);
@@ -161,6 +199,10 @@ main{
     display: none;
 }
 
+.show-message{
+    display: block;
+}
+
 .CodeMirror-sizer{
     margin-top: 12px;
     margin-bottom: 12px;
@@ -168,4 +210,8 @@ main{
 
 .CodeMirror-linenumber{
     text-align: center !important;
+}
+
+.CodeMirror-scroll{
+    padding-bottom: 20px !important;
 }
