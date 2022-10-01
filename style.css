@@ -7,14 +7,30 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+::-webkit-scrollbar{
+    background-color: #2c2c2c;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #151515;
+    border: 200px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: tomato;
+}
+
 header{
     height: 50px;
-    background-color: tomato;
+    background-color: #1c1c1c;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0 16px;
     gap: 20px;
+    color: white;
 }
 
 header p{
@@ -27,26 +43,7 @@ header p{
 
 header p:hover{
     color: white;
-    background-color: midnightblue;
-}
-
-::-webkit-scrollbar{
     background-color: #3c3c3c;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: #252525;
-    border: 200px;
-    border-left: solid 1px #ffffff50;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background-color: #1c1c1c;
-}
-
-.hide{
-    display: none;
 }
 
 #run-btn{
@@ -59,7 +56,7 @@ header p:hover{
 }
 
 #run-btn:hover{
-    background-color: lightgray;
+    background-color: tomato;
     border: black 2px solid;
 }
 
@@ -75,10 +72,61 @@ main{
 }
 
 .code{
-    height: 100%;
     display: flex;
     flex-direction: column;
     width: 500px;
+    height: 100%;
+    background-color: #3c3c3c;
+    padding: 20px 0px;
+}
+
+.code-subarea{
+    height: 100%;
+    padding: 8px 20px;
+}
+
+.code-title{
+    max-height: 48px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 8px;
+    margin: 0px !important;
+    padding: 8px 3px;
+    color: white;
+    font-size: 1.3em;
+}
+
+.code-title img{
+    width: 32px;
+}
+
+.code-subarea{
+    display: flex;
+    flex-direction: column;
+}
+
+.code-subarea :nth-child(3){
+    border-radius: 8px;
+    height: 100%;
+}
+
+/* .code >  div{
+    border-bottom: 2px solid #3c3c3c;
+    height: 100%;
+    margin: 0px 20px;
+    border-radius: 8px;
+}*/
+
+.preview{
+    width: calc(100% - 500px);
+    height: 100%;
+}
+
+#preview-window{
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .horizontal-view{
@@ -91,32 +139,33 @@ main{
 
 .horizontal-view .code{
     flex-direction: row;
+    width: 100%;
+    padding: 8px;
+}
+
+.horizontal-view .code-subarea{
+    width: 100%;
+    padding: 0px 8px 8px 8px;
+}
+
+/*
+.horizontal-view .code{
+    flex-direction: row;
 }
 
 .horizontal-view .code > div{
     width: 100%;
+} */
+
+.hide{
+    display: none;
 }
 
 .CodeMirror-sizer{
     margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .CodeMirror-linenumber{
     text-align: center !important;
-}
-
-.code >  div{
-    border-bottom: 2px solid #3c3c3c;
-    height: 100%;
-}
-
-.preview{
-    width: calc(100% - 500px);
-    height: 100%;
-}
-
-#preview-window{
-    width: 100%;
-    height: 100%;
-    border: none;
 }

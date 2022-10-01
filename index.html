@@ -48,7 +48,13 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/pastel-on-dark.min.css" integrity="sha512-kcwXu8swgWHAdTrmVuUiuJK0+VtDCVXhOpznpnZHfx84G78aGLqbEtu5MYN08zV3XpP719SPTOzrcfirU1JnDA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/pastel-on-dark.min.css"
+      integrity="sha512-kcwXu8swgWHAdTrmVuUiuJK0+VtDCVXhOpznpnZHfx84G78aGLqbEtu5MYN08zV3XpP719SPTOzrcfirU1JnDA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/edit/closetag.min.js"
@@ -71,29 +77,51 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/display/autorefresh.min.js" integrity="sha512-vAsKB7xXQAWMn5kcwda0HkFVKUxSYwrmrGprVhmbGFNAG1Ij+2epT3zzdwjHTJyDsKXsiEdrUdhIxh7loHyX+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/display/autorefresh.min.js"
+      integrity="sha512-vAsKB7xXQAWMn5kcwda0HkFVKUxSYwrmrGprVhmbGFNAG1Ij+2epT3zzdwjHTJyDsKXsiEdrUdhIxh7loHyX+A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
 
   <body>
     <header>
-        <p onclick="showEditor('HTML')">html</p>
-        <p onclick="showEditor('CSS')">css</p>
-        <p onclick="showEditor('JS')">js</p>
-        <p onclick="rotateView()">Rotate</p>
+      <p onclick="showEditor('HTML')">html</p>
+      <p onclick="showEditor('CSS')">css</p>
+      <p onclick="showEditor('JS')">js</p>
+      <p onclick="rotateView()">Rotate</p>
       <button id="run-btn" onclick="refresh()">Run</button>
     </header>
     <main>
       <div class="editor">
         <div class="code">
-          <textarea id="HTMLeditor"></textarea>
-        <textarea id="CSSeditor"></textarea>
-        <textarea id="JSeditor"></textarea>  
+          <div class="code-subarea">
+            <div class="code-title">
+              <img src="src/HTML5-Logo.png" alt="HTML5 Logo" />
+              <p>HTML</p>
+            </div>
+            <textarea id="HTMLeditor"></textarea>
+          </div>
+          <div class="code-subarea">
+            <div class="code-title">
+              <img src="src/CSS3-logo.png" alt="CSS3 Logo" />
+              <p>CSS</p>
+            </div>
+            <textarea id="CSSeditor"></textarea>
+          </div>
+          <div class="code-subarea">
+            <div class="code-title">
+              <img src="src/JavaScript-logo.png" alt="JavaScript Logo" />
+              <p>JS</p>
+            </div>
+            <textarea id="JSeditor"></textarea>
+          </div>
         </div>
-      <div class="preview">
-        <iframe id="preview-window"></iframe>
+        <div class="preview">
+          <iframe id="preview-window"></iframe>
+        </div>
       </div>
-    </div>
     </main>
 
     <script src="editor.js"></script>
