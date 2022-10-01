@@ -1,0 +1,122 @@
+*, *::before, * ::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    height: 50px;
+    background-color: tomato;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 16px;
+    gap: 20px;
+}
+
+header p{
+    cursor: pointer;
+    transition: 300ms;
+    width: 100px;
+    text-align: center;
+    height: 100%;
+}
+
+header p:hover{
+    color: white;
+    background-color: midnightblue;
+}
+
+::-webkit-scrollbar{
+    background-color: #3c3c3c;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #252525;
+    border: 200px;
+    border-left: solid 1px #ffffff50;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #1c1c1c;
+}
+
+.hide{
+    display: none;
+}
+
+#run-btn{
+    padding: 8px 32px;
+    border-radius: 0.5em;
+    border: transparent 2px solid;
+    cursor: pointer;
+    transition: 300ms;
+    font-weight: 700;
+}
+
+#run-btn:hover{
+    background-color: lightgray;
+    border: black 2px solid;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 55px);
+}
+
+.editor{
+    width: 100%;
+    display: flex;
+}
+
+.code{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.horizontal-view{
+    flex-direction: column;
+}
+
+.horizontal-view .preview, .horizontal-view .code{
+ width: 100%;
+}
+
+.horizontal-view .code{
+    flex-direction: row;
+}
+
+.horizontal-view .code > div{
+    width: 100%;
+}
+
+.CodeMirror-sizer{
+    margin-top: 12px;
+}
+
+.CodeMirror-linenumber{
+    text-align: center !important;
+}
+
+.code >  div{
+    border-bottom: 2px solid #3c3c3c;
+    height: 100%;
+}
+
+.preview{
+    width: calc(100% - 500px);
+    height: 100%;
+}
+
+#preview-window{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
